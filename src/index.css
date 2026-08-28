@@ -1,0 +1,63 @@
+@import "tailwindcss";
+
+@layer utilities {
+  .font-serif-garamond {
+    font-family: 'EB Garamond', Georgia, serif;
+  }
+  .font-serif-source {
+    font-family: 'Source Serif 4', Georgia, serif;
+  }
+  .font-sans-clean {
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+  .font-sans-inter {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+  .font-mono-code {
+    font-family: 'Fira Code', monospace;
+  }
+}
+
+@media print {
+  @page {
+    margin: 12mm 12mm 12mm 12mm;
+    size: A4 portrait;
+  }
+  
+  body {
+    background: #ffffff !important;
+    color: #000000 !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  .no-print {
+    display: none !important;
+  }
+
+  .print-only {
+    display: block !important;
+  }
+
+  .resume-paper {
+    box-shadow: none !important;
+    border: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    background: transparent !important;
+    color: #000000 !important;
+  }
+
+  /* Prevent awkward page breaks inside sections and items */
+  .page-break-avoid {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  a {
+    text-decoration: none !important;
+    color: inherit !important;
+  }
+}
